@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ftesë Martese</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: linear-gradient(to bottom, #5c0000, #1a0000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    color: gold;
+    text-align: center;
+}
+
+.envelope {
+    width: 320px;
+    height: 200px;
+    background: #8b0000;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    font-size: 22px;
+    color: white;
+}
+
+.card {
+    display: none;
+    padding: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: gold;
+    color: #5c0000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+</head>
+<body>
+
+<audio id="music" src="muzika.mp3" loop></audio>
+
+<div class="envelope" id="envelope" onclick="openLetter()">
+    <div class="text">Hap Ftesën ❤️</div>
+</div>
+
+<div class="card" id="card">
+    <h1>Martesa e</h1>
+    <h2>Jetlum & Leonita</h2>
+
+    <p>
+        Me shumë dashuri ju ftojmë të festoni
+        ditën më të bukur të jetës sonë
+        Me pranin tuaj na rrespektoni ne.
+    </p>
+
+    <h3>29 Dhjetor 2026</h3>
+    <p>Restaurant Brilant - Hajvali</p>
+
+    <a href="https://www.google.com/maps/place/Hotel+%26+Restaurant+BRILANT/@42.6164995,21.1672996,17z/data=!3m1!4b1!4m9!3m8!1s0x13549d10bbacd091:0xd40113c0b8d76917!5m2!4m1!1i2!8m2!3d42.6164995!4d21.1698745!16s%2Fg%2F11f7650jpv?entry=ttu&g_ep=EgoyMDI2MDIwOS4wIKXMDSoASAFQAw%3D%3D">
+        HARTA
+    </a>
+</div>
+
+<script>
+function openLetter() {
+    document.getElementById("envelope").style.display = "none";
+    document.getElementById("card").style.display = "block";
+    document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
